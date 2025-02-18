@@ -4,8 +4,8 @@ return {
   lazy = false, -- make sure the plugin is always loaded at startup
   config = true,
   keys = {
-    { '<leader>qs', '<cmd>SessionSelect<cr>' },
-    { '<leader>qS', '<cmd>Telescope persisted<cr>' },
-    { '<leader>ql', '<cmd>SessionLoadLast<cr>' },
+    { '<leader>qs', '<cmd>SessionSelect<cr>', desc = "Select session" },
+    { '<leader>qS', '<cmd>Telescope persisted<cr>', desc = "Manage session" },
+    { '<leader>ql', '<cmd>SessionLoadLast<cr>', desc = "Load last session" },
   }
 }
