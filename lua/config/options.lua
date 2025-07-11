@@ -7,5 +7,5 @@ vim.opt.relativenumber = false
 -- vim.g.loaded_netrw = 1
 -- vim.g.loaded_netrwPlugin = 1
 vim.o.sessionoptions = 'buffers,curdir,folds,help,tabpages,winsize,terminal'
-vim.g.lazyvim_python_lsp = 'ruff'
+vim.g.lazyvim_python_lsp = "pyright"
 vim.g.lazyvim_python_ruff = 'ruff'
