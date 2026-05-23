@@ -1,19 +1,12 @@
 return {
-  'linux-cultist/venv-selector.nvim',
-  branch='regexp',
-  dependencies = { 'neovim/nvim-lspconfig', 'nvim-telescope/telescope.nvim' },
-  opts = {
-    -- Your options go here
-    -- name = "venv",
-    -- auto_refresh = false
-    name = {".venv", "venv"},
-    auto_refresh = true,
+  "linux-cultist/venv-selector.nvim",
+  dependencies = {
+    { "nvim-telescope/telescope.nvim", version = "*", dependencies = { "nvim-lua/plenary.nvim" } }, -- optional: you can also use fzf-lua, snacks, mini-pick instead.
   },
-  event = 'VeryLazy', -- Optional: needed only if you want to type `:VenvSelect` without a keymapping
-  keys = {
-    -- Keymap to open VenvSelector to pick a venv.
-    -- { '<leader>vs', '<cmd>VenvSelect<cr>' },
-    -- Keymap to retrieve the venv from a cache (the one previously used for the same project directory).
-    -- { '<leader>vc', '<cmd>VenvSelectCached<cr>' },
+  ft = "python", -- Load when opening Python files
+  keys = { { ",v", "<cmd>VenvSelect<cr>" } }, -- Open picker on keymap
+  opts = {
+    options = {}, -- plugin-wide options
+    search = {}   -- custom search definitions
   },
 }
